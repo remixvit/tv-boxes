@@ -1,0 +1,8 @@
+# Откат лаунчера на 192.168.1.53 (launcherx не отключался, поэтому достаточно выключить службу Home)
+adb -s 192.168.1.53:5555 shell settings put secure enabled_accessibility_services ""
+adb -s 192.168.1.53:5555 shell pm uninstall --user 0 com.gathin.tvhome
+# (до установки службы enabled_accessibility_services был null, accessibility_enabled = 0)
+
+# Откат лаунчера на 192.168.1.102 (launcherx не отключался)
+adb -s 192.168.1.102:5555 shell settings put secure enabled_accessibility_services ""
+adb -s 192.168.1.102:5555 shell pm uninstall --user 0 com.gathin.tvhome
