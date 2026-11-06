@@ -16,6 +16,10 @@
 ## Оставлено
 YouTube, Кинопоиск (`ru.kinopoisk.tv`), VK Видео (`com.vk.tv`), HDRezka (`com.falcofemoralis.hdrezkaapp`), SASFlix (`com.podsas.sasflix.tv`), VLC, Send Files to TV (`com.yablio.sendfilestotv`), Google TV (`com.google.android.videos`), Netflix.
 
+## Доочистка 2026-11-06 (PatchWall и лишнее)
+Отключено (`pm disable-user --user 0`): `com.mitv.tvhome.atv` (PatchWall), `com.mitv.videoplayer`, `com.mitv.gallery`, `com.xiaomi.mitv.mediaexplorer`, `com.xiaomi.android.tvsetup.partnercustomizer`, `com.xm.webcontent`, `com.google.android.feedback`, `com.android.printspooler`, `com.google.android.marvin.talkback`, `com.google.android.syncadapters.calendar`.
+Оставлены Miracast-службы (`smartshare`, `mi_connect_service`, `wfdsinkhelperservice`): плитка Miracast есть на главном экране. После отключения проверены приложения и Home: YouTube, Кинопоиск и VK Видео запускаются, Home возвращает на новый лаунчер.
+
 ## Лаунчер
 - `com.gathin.tvhome` 3.2 установлен, служба `HomeKeyService` включена, `stock_home_redirect = launcherx`, `launcherx` включён.
 - Первая проверка Home не засчитана (приставка была в заставке), повторная прошла: Home из Настроек открывает новый лаунчер.

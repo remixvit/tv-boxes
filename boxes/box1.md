@@ -16,9 +16,13 @@
 - Приложения: `com.iqiyi.i18n.tv`, `ru.rutube.app`, `com.yandex.browser.tv`, `com.google.android.play.games`, `com.google.android.youtube.tvmusic`
 
 ## Оставлено
-YouTube, VK Видео (`com.vk.tv`), VLC, голосовой пульт (`katniss`, `tv.remote.service`), обновления (`xiaomi.mitv.updateservice`), `gms`, `vending`, `droidlogic.*`, лаунчеры `launcherx` и `mitv.tvhome.atv`.
+YouTube, VK Видео (`com.vk.tv`), VLC, голосовой пульт (`katniss`, `tv.remote.service`), обновления (`xiaomi.mitv.updateservice`), `gms`, `vending`, `droidlogic.*`, Google TV Launcher (`launcherx`). PatchWall (`mitv.tvhome.atv`) отключён позже, см. «Доочистка».
 
-Не трогали (спорные): `com.xiaomi.mitv.smartshare`, `com.xiaomi.mi_connect_service`, `com.xiaomi.wfdsinkhelperservice` (Miracast и трансляция), `com.mitv.gallery`, `com.mitv.videoplayer`, `com.xiaomi.mitv.mediaexplorer`.
+Не трогали: `com.xiaomi.mitv.smartshare`, `com.xiaomi.mi_connect_service`, `com.xiaomi.wfdsinkhelperservice` (Miracast и трансляция). Галерея, видеоплеер и медиа-проводник Xiaomi отключены позже, см. «Доочистка».
+
+## Доочистка 2026-11-06 (PatchWall и лишнее)
+Отключено (`pm disable-user --user 0`): `com.mitv.tvhome.atv` (PatchWall), `com.mitv.videoplayer`, `com.mitv.gallery`, `com.xiaomi.mitv.mediaexplorer`, `com.xiaomi.android.tvsetup.partnercustomizer`, `com.xm.webcontent`, `com.google.android.feedback`, `com.android.printspooler`, `com.google.android.marvin.talkback`, `com.google.android.syncadapters.calendar`.
+Оставлены Miracast-службы (`smartshare`, `mi_connect_service`, `wfdsinkhelperservice`): плитка Miracast есть на главном экране. После отключения проверены приложения и Home: YouTube и VK Видео запускаются, Home возвращает на новый лаунчер.
 
 ## Лаунчер
 - `com.gathin.tvhome` 3.2 установлен, служба `HomeKeyService` включена, `stock_home_redirect = launcherx`.
